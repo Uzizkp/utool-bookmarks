@@ -1,14 +1,17 @@
 {
-	"pluginName": "bookmarks-v2",
+	"pluginName": "bookmarks",
 	"description": "想去哪里点哪里，快速拨号",
+	"author": "kp",
+	"homepage":"zkpeace.com",
 	"main": "index.html",
 	"version": "0.0.1",
+	"preload":"preload.js",
 	"logo":"images/logo.png",
 	"features": [
 		{
 		  "code": "bookmarks",
 		  "explain": "没什么好介绍的",
-			"cmds":["书签", "bookmarks"]
+		  "cmds":["书签", "bookmarks", "b","BM"]
 		}
 	],
 	"development": {
