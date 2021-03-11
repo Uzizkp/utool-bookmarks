@@ -1,0 +1,20 @@
+{
+	"pluginName": "bookmarks-v2",
+	"description": "想去哪里点哪里，快速拨号",
+	"main": "index.html",
+	"version": "0.0.1",
+	"logo":"images/logo.png",
+	"features": [
+		{
+		  "code": "bookmarks",
+		  "explain": "没什么好介绍的",
+			"cmds":["书签", "bookmarks"]
+		}
+	],
+	"development": {
+		"main": "index.html"
+	},
+	"pluginSetting": {
+		"single": true
+	}
+}

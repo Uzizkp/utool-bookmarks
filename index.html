@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="semantic/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="common.css">
+
+
+    <title>快速导航工具</title>
+  </head>
+  
+  <body>
+
+
+
+
+    <div class="container p-5">
+
+      <h2 class="ui grey inverted header mb-5">
+        <i class="compass outline icon"></i>
+        <div class="content">网址导航 
+          <!-- <div class="sub header">Check out our plug-in marketplace</div> -->
+        </div>
+      </h2>
+
+      
+      <!-- <div class="ui fluid icon input p-5 hidden">
+        <input type="text" placeholder="广泛搜索" spellcheck="false" data-ms-editor="true">
+        <i class="search icon"></i>
+      </div> -->
+
+      
+      <div class="ui six column grid" id="app">
+        <div v-for="item in viewArr" class="column">
+          <div class="ui fluid link card" v-on:click="OpenExternalUrl(item.url)">
+            <div class="image">
+              <img v-bind:src= "item.icon" class="ui fluid image" >
+            </div>
+            <!-- <div class="content">
+              <a class="header">{{item.title}}</a>
+            </div> -->
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="row row-cols-5 row-cols-md-5 g-4"  id="app">
+        <div class="col " v-for="item in viewArr"  >
+          <div class="card rounded-lg" v-on:click="OpenExternalUrl(item.url)">
+            <img v-bind:src= "item.icon" class="card-img-top rounded-lg" alt="...">
+            <div class="card-body"> 
+              <h6 class="card-title">{{item.title}}</h5>
+            </div>
+          </div>
+        </div>
+      </div> -->
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script type="text/javascript">
+      var app = new Vue ({
+        el:'#app',
+        data:{
+          viewArr: [
+            {url: "zkpeace.com" ,
+            icon: "images/kp-logo.jpg" ,
+            title: "Zkpeace",},
+            {url: "www.bilibili.com" ,
+            icon: "images/bilibili.jpeg" ,
+            title: "哔哩哔哩",},
+            {url: "www.zhihu.com" ,
+            icon: "images/zhihu.jpeg" ,
+            title: " 知乎",},
+            {url: "ecampus.uni-bonn.de" ,
+            icon: "images/ecampus.png" ,
+            title: "Ecampus",},
+            {url: "basis.uni-bonn.de" ,
+            icon: "images/basis.jpeg" ,
+            title: "Basis",},
+            {url: "www.youtube.com" ,
+            icon: "images/youtube.jpg" ,
+            title: "Youtube",},
+            {url: "www.github.com" ,
+            icon: "images/github.png" ,
+            title: "Basis",},
+            {url: "www.csdn.com" ,
+            icon: "images/csdn.jpg" ,
+            title: "Csdn",},
+            {url: "www.douban.com" ,
+            icon: "images/douban.jpeg" ,
+            title: "Csdn",},
+            {url: "www.amazon.de" ,
+            icon: "images/amazon.png" ,
+            title: "Csdn",},
+            {url: "www.leancloud.com" ,
+            icon: "images/leancloud.jpeg" ,
+            title: "leancloud",},
+            {url: "www.ifsp.tv" ,
+            icon: "images/yifan.png" ,
+            title: "Csdn",},
+          ]
+        },
+
+        methods:{
+          OpenExternalUrl: function(url){
+            utools.shellOpenExternal('https://'+url)
+           }
+        }
+      })
+    </script>
+    <!--  Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+
+  </body>
+</html>
